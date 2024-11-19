@@ -90,7 +90,7 @@ export default function Pricing() {
           className="text-center mt-16 max-w-3xl mx-auto"
         >
           <p className="text-gray-600 text-lg">
-            🔥 Don't miss out on these special launch prices! Regular pricing will be $9.97/month or $147 for lifetime access.
+            🔥 Don't miss out on these Special Launch Prices! Regular pricing will be $9.97/month or $147 for Lifetime Access.
           </p>
         </motion.div>
       </div>
