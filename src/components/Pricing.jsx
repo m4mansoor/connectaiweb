@@ -29,8 +29,12 @@ export default function Pricing() {
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Monthly Plan</h3>
             <div className="mb-6">
-              <span className="text-4xl font-bold text-indigo-600">$4.97</span>
-              <span className="text-gray-600">/month</span>
+              <div className="flex items-center gap-2">
+                <span className="text-4xl font-bold text-indigo-600">$4.97</span>
+                <span className="text-gray-600">/month</span>
+                <span className="text-gray-400 line-through text-lg">$9.97</span>
+              </div>
+              <div className="text-sm text-indigo-600 font-semibold mt-2">50% OFF - Limited Time!</div>
             </div>
             <ul className="space-y-4 mb-8">
               {features.map((feature, index) => (
@@ -51,15 +55,19 @@ export default function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl shadow-lg p-8 text-white"
+            className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl shadow-lg p-8 text-white relative"
           >
             <div className="absolute top-4 right-4 bg-yellow-400 text-gray-900 text-sm font-bold px-3 py-1 rounded-full">
               BEST VALUE
             </div>
             <h3 className="text-2xl font-bold mb-4">Lifetime Deal</h3>
             <div className="mb-6">
-              <span className="text-4xl font-bold">$67</span>
-              <span className="text-indigo-100">/lifetime</span>
+              <div className="flex items-center gap-2">
+                <span className="text-4xl font-bold">$67</span>
+                <span className="text-indigo-100">/lifetime</span>
+                <span className="text-indigo-200 line-through text-lg">$147</span>
+              </div>
+              <div className="text-sm text-yellow-400 font-semibold mt-2">55% OFF - Limited Time!</div>
             </div>
             <ul className="space-y-4 mb-8">
               {[...features, "Lifetime updates", "Future features included"].map((feature, index) => (
@@ -74,6 +82,17 @@ export default function Pricing() {
             </button>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mt-16 max-w-3xl mx-auto"
+        >
+          <p className="text-gray-600 text-lg">
+            🔥 Don't miss out on these special launch prices! Regular pricing will be $9.97/month or $147 for lifetime access.
+          </p>
+        </motion.div>
       </div>
     </div>
   );
